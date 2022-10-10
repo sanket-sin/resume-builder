@@ -10,7 +10,10 @@ const routes: Routes = [
   {path:'', component: HomeComponent},
   { path : "resume", component: ResumeComponent},
   { path : "form/personal-details", component: FormComponent},
-  { path : "form/education", component: FormComponent}
+  { path : "form/education", component: FormComponent},
+  { path : "form/experience", component: FormComponent},
+  { path : "form/projects", component: FormComponent},
+  { path : "form/certificate", component: FormComponent}
 
 
 ];

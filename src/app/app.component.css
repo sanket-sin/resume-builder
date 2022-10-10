@@ -1,0 +1,70 @@
+::ng-deep .container{
+    border: 1px dashed black;
+    padding: 2rem;
+    width: 95vw;
+    margin: 1rem 0;
+    text-align: center;
+    box-shadow: 0 0 3px #ff0000;
+}
+h1{
+    text-align: center;
+    margin: 4rem 0 10rem 0;
+}
+h2{
+    cursor: pointer;
+}
+::ng-deep h3{
+    margin: 2rem 12rem !important;
+}
+
+
+::ng-deep input[type=text],::ng-deep input[type=password], ::ng-deep select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  ::ng-deep input[type=submit] {
+    width: max-content;
+    background-color: #008691;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  ::ng-deep input[type=submit]:hover {
+    background-color: #008691;
+  }
+  ::ng-deep p {
+    margin-bottom: -.5rem;
+    
+  }
+  
+  ::ng-deep p.btn{
+    text-align: end;
+    
+  }
+  ::ng-deep form {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    width: 400px;
+    margin: auto; 
+  }
+  ::ng-deep .error-msg{
+    color: #ff0000
+  }
+
+  ::ng-deep .form-control.ng-touched.ng-valid{
+    border: 1px solid green;
+
+  }::ng-deep .form-control.ng-touched.ng-invalid{
+    border: 1px solid #ff0000;
+  }

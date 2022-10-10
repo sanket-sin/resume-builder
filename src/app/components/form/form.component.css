@@ -1,0 +1,19 @@
+
+.main{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.textDiv{
+    text-align: center;
+
+}
+.formHeader{
+    font-size: 24px;
+    font-weight: bold;
+    color: #008691;   
+}
+/* .btn input:disabled{
+    background-color: #00859134;  
+} */

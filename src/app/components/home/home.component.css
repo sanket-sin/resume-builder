@@ -1,0 +1,28 @@
+.btn {
+    background-color: yellow;
+    margin: 0 1rem 0 0;
+    border-radius: 5rem;
+    border: none;
+    padding: 1rem 1.4rem;
+    font-size: 1.5rem;
+    color: black;
+}
+
+.btn:hover {
+    color: yellow;
+    background-color: black;
+}
+
+.content{
+  margin: 0;
+  position: absolute;
+  top: 35%;
+  left: 54%;
+  transform: translate(-50%, -50%);
+}
+
+.text {
+    font-size: 8rem;
+    margin-block-end: 1rem;
+}
+

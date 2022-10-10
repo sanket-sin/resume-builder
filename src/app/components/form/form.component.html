@@ -1,0 +1,48 @@
+<div class="main">
+  <!-- <p *ngIf="error">{{error}}</p> -->
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="textDiv">
+    <p class="formHeader">{{personalDetails}}</p>
+    </div>
+
+    <p>
+        <label for="fName">{{fName}} </label>
+        <input type="text" id="fName" name="fName" formControlName="fName" class="form-control">
+      </p>
+      <small *ngIf="formData.fName?.touched && formData.fName?.invalid" class="error-msg">Please enter a valid Name.
+      </small>
+
+
+    <p>
+        <label for="lName">{{lName}} </label>
+        <input type="text" id="lName" name="lName" formControlName="lName" class="form-control">
+      </p>
+
+
+    <p>
+        <label for="email">{{email}} </label>
+        <input type="text" id="email" name="email" formControlName="email" class="form-control">
+      </p>
+      <small *ngIf="formData.email?.touched && formData.email?.invalid" class="error-msg">Please enter a valid Email.
+      </small>
+
+    <p>
+      <label for="contact">{{contact}} </label>
+      <input type="text" id="contact" name="contact" formControlName="contact" class="form-control">
+    </p>
+    <small *ngIf="formData.contact?.touched && formData.contact?.invalid" class="error-msg">Please enter a valid Phone Number.
+    </small>
+
+    <p>
+      <label for="address">{{address}} </label>
+      <input type="text" id="address" name="address" formControlName="address" class="form-control">
+    </p>
+
+    <p class="btn">
+      <!-- <input type="submit" value="Next" (click)="nextForm()" [disabled]="form">    to disable button when form is invalid -->
+      <input type="submit" value="Next" (click)="nextForm()">
+    </p>
+
+
+  </form>
+</div>

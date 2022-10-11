@@ -17,9 +17,22 @@ export class FormComponent implements OnInit {
   contact!: string;
   address!: string;
   formHeader!: string;
+  orgName!: string;
+  position!: string;
+  description!: string;
   url: any = window.location.href;
   formHeaderEducation: any;
   formHeaderPersonalDetail: any;
+  formHeaderEducationDetail:any;
+  forPersonalDetails:Boolean= false;
+  forEducationDetails:Boolean = false;
+  forExperienceDetails:Boolean = false;
+  forProjectsDetails:Boolean = false;
+  university!: string;
+  location!: string;
+  courseName!: string;
+  startDate!: string;
+  endDate!: string;
   constructor(private routes: Router,) {
 
 
@@ -27,17 +40,18 @@ export class FormComponent implements OnInit {
 
 
   ngOnInit() {
-    // this.getLabels();
+    this.getLabels();
 
-    this.formHeaderEducation = 'Education';
-    this.formHeaderPersonalDetail = 'Personal Details';
-    this.fName = 'First Name';
-    this.lName = 'Last Name';
-    this.email = 'Email';
-    this.contact = 'Contact';
-    this.address = 'Address';
+    // this.formHeaderEducation = 'Education';
+    // this.formHeaderPersonalDetail = 'Personal Details';
+    // this.fName = 'First Name';
+    // this.lName = 'Last Name';
+    // this.email = 'Email';
+    // this.contact = 'Contact';
+    // this.address = 'Address';
+
     // if (this.url.endsWith("form/personal-details")){
-    //   this.form.get('contact')?;
+    //   this.form.get('contact');
     // }
   }
 
@@ -76,50 +90,54 @@ export class FormComponent implements OnInit {
     }
   }
 
-  // getLabels(){
+  getLabels(){
 
-  //   if(this.url.endsWith("form/personal-details")){
-  //     this.formHeader='Personal Details';
-  //     this.fName='First Name';
-  //     this.lName='Last Name';
-  //     this.email='Email';
-  //     this.contact= 'Contact';
-  //     this.address='Address';
-  //   }
-  //   else if(this.url.endsWith("form/education")){
-  //     this.formHeader='Education';
-  //     this.fName='University';
-  //     this.lName='Location';
-  //     this.email='Course Name';
-  //     this.contact= 'Start Name';
-  //     this.address='End Date';
-  //   }
-  //   else if(this.url.endsWith("form/experience")){
-  //     this.formHeader='Experience';
-  //     this.fName='University';
-  //     this.lName='Location';
-  //     this.email='Course Name';
-  //     this.contact= 'Start Name';
-  //     this.address='End Date';
-  //   }
-  //   else if(this.url.endsWith("form/projects")){
-  //     this.formHeader='Projects';
-  //     this.fName='University';
-  //     this.lName='Location';
-  //     this.email='Course Name';
-  //     this.contact= 'Start Name';
-  //     this.address='End Date';
-  //   }
-  //   else if(this.url.endsWith("form/certificate")){
-  //     this.formHeader='Certificate';
-  //     this.fName='University';
-  //     this.lName='Location';
-  //     this.email='Course Name';
-  //     this.contact= 'Start Name';
-  //     this.address='End Date';
-  //   }
+    if(this.url.endsWith("form/personal-details")){
+      this.forPersonalDetails = true;
+      this.forEducationDetails = false;
+      this.forExperienceDetails = false;
+      this.forProjectsDetails = false;
+      this.formHeaderPersonalDetail='Personal Details';
+      this.fName='University';
+      this.lName='Location';
+      this.email='Course Name';
+      this.contact= 'Start Name';
+      this.address='End Date';
+    }
+    else if(this.url.endsWith("form/education")){
+      this.formHeaderEducationDetail='Education';
+      this.university='University';
+      this.location='Location';
+      this.courseName='Course Name';
+      this.startDate= 'Start Name';
+      this.endDate='End Date';
+    }
+    else if(this.url.endsWith("form/experience")){
+      this.formHeader='Experience';
+      this.orgName='First Name';
+      this.position='Last Name';
+      this.description='Email';
+      this.startDate= 'Start Name';
+      this.endDate='End Date';
+    }
+    else if(this.url.endsWith("form/projects")){
+      this.formHeader='Projects';
+      this.fName='University';
+      this.lName='Location';
+      this.email='Course Name';
+      this.contact= 'Start Name';
+      this.address='End Date';
+    }
+    else if(this.url.endsWith("form/certificate")){
+      this.formHeader='Certificate';
+      this.fName='University';
+      this.lName='Location';
+      this.email='Course Name';
+      this.contact= 'Start Name';
+      this.address='End Date';
+    }
 
-  // }
+  }
 
 
 }

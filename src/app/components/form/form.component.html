@@ -3,6 +3,7 @@
   <form [formGroup]="form" (ngSubmit)="onSubmit()">
 
     <!-- Personal detail form starts -->
+    <div class="prsnl">
     <div class="textDiv">
     <p class="formHeader">{{formHeaderPersonalDetail}}</p>
     </div>
@@ -39,12 +40,13 @@
       <label for="address">{{address}} </label>
       <input type="text" id="address" name="address" formControlName="address" class="form-control">
     </p>
-
+  </div>
     <!-- Personal detail form ends -->
 
     <!-- Education form starts -->
-    <!-- <div class="textDiv">
-      <p class="formHeader">{{formHeaderEducation}}</p>
+    <!-- <div class="prsnl">
+      <div class="textDiv">
+      <p class="formHeader">{{formHeaderPersonalDetail}}</p>
       </div>
   
       <p>
@@ -79,9 +81,9 @@
         <label for="address">{{address}} </label>
         <input type="text" id="address" name="address" formControlName="address" class="form-control">
       </p>
-   -->
+    </div> -->
       <!-- Education detail form ends -->
-
+  
     <p class="btn">
       <!-- <input type="submit" value="Next" (click)="nextForm()" [disabled]="form">    to disable button when form is invalid -->
       <input type="submit" value="Next" (click)="nextForm()">
